@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="formulario">
+        <h1 id="title">Formulário</h1>
+        <form action="redirecionamento.html" method="post">
+
+            <div class="form nome">
+                <label for="nome">Nome:</label>
+                <input class="input" type="text" placeholder="Nome e sobrenome" name="nome" id="nome" pattern="[0-9]*" required>
+            </div>
+
+            <div class="form email">
+                <label for="email"> Email </label>
+                <input class="input" type="email" placeholder="Seu email principal" name="email" id="email" >
+            </div>
+
+            <div class="form datanasc">
+                <label for="datanasc">Data de nascimento</label>
+                <input class="input" type="date" name="datanasc" id="datanasc" >
+            </div>
+
+            <div class="form genero">
+
+                <p>Sexo</p>
+
+                <label for="m">Masculino</label>
+                <input type="radio" name="genero" value="M" id="m">
+
+                <label class="textbold" for="f">Feminino</label>
+                <input type="radio" name="genero" value="F" id="f">
+    
+                <label class="textbold" for="o">Outro</label>
+                <input type="radio" name="genero" value="O" id="o">
+            </div> <br>
+
+            <div class="form linguagens">
+
+                <p>Linguagens que domina:</p>
+
+                <label for="">Javascript</label>
+                <input type="checkbox" name="linguagens" value="JS"  id="">
+    
+                <label class="textbold" for="">Java</label>
+                <input type="checkbox" name="linguagens" value="java" id="">
+            
+                <label class="textbold" for="">Python</label>
+                <input type="checkbox" name="linguagens" value="python" id="">
+            </div> <br>
+
+            <div class="form horario">
+
+                <p>Horário de preferência:</p>
+                
+                <select name="horarioPreferencia" id="">
+                    <option hidden>Selecione</option>
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino">Vespertino</option>
+                    <option value="noturno">Noturno</option>
+                    <option value="indiferente">Indiferente</option>
+                </select>
+            </div> <br>  
+
+            <div>
+                <p>Informações adicionais:</p>
+                <textarea name="" id="text-area" ></textarea>
+            </div> <br> <br>
+
+            <div id="submit">
+                <input type="submit" value="Enviar" id="enviar">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var input = document.querySelector('#input input');
+        var img = document.querySelector('#input img');
+        img.addEventListener('click', function () {
+        input.type = input.type == 'text' ? 'password' : 'text';
+    });
+    </script>
+
+</body>
+</html>
